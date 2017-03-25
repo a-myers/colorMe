@@ -5,7 +5,7 @@
  * Date: 3/25/17
  * Time: 3:39 AM
  */
-
+include '/js/regCheck.js'
 include 'connection.php';
 
 session_start();
@@ -205,32 +205,32 @@ if(isset($_POST['register'])) {
         <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" type="email" value='<?php echo $_POST["email"]; ?>' name="email" id="email">
+                <input class="form-control" type="email" value='<?php echo $_POST["email"]; ?>' name="email" id="email" onblur="checkEmail('email')">
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-control" type="password" value='<?php echo $_POST["password"]; ?>' name="password" id="password">
+                <input class="form-control" type="password" value='<?php echo $_POST["password"]; ?>' name="password" id="password" onblur="checkPassword('password')">
             </div>
 
             <div class="form-group">
                 <label for="v_password">Verify Password</label>
-                <input class="form-control" type="password" value='' name="v_password" id="v_password">
+                <input class="form-control" type="password" value='' name="v_password" id="v_password" onblur="vCheckPassword('password' , 'v_password')">
             </div>
 
             <div class="form-group">
                 <label for="fname">FirstName</label>
-                <input class="form-control" type="text" value='' name="fname" id="fname">
+                <input class="form-control" type="text" value='' name="fname" id="fname" onblur="checkFname('fname')">
             </div>
 
             <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input class="form-control" type="text" value='' name="lname" id="lname">
+                <input class="form-control" type="text" value='' name="lname" id="lname" onblur="checkLname('lname')">
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input class="form-control" type="text" value='' name="phone" id="phone">
+                <input class="form-control" type="text" value='' name="phone" id="phone" onblur="checkPhone('phone')">
             </div>
 
             <button type="submit" class="btn btn-default" name="modal_register">Register</button>
