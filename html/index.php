@@ -51,7 +51,7 @@ body {
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
-    <link href="css/styles.css" rel="stylesheet">
+    <link media="screen" href="css/styles.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/themes.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -260,7 +260,7 @@ if(isset($_POST['register'])) {
 } ?>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #<?php echo $_SESSION['color']; ?>">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div style="display:flex;justify-content:center;align-items:center;"><h1 id="title">colorMe</h1></div>
@@ -303,7 +303,7 @@ if(isset($_POST['register'])) {
                                 <p>
                                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
 
-                                    <input type="text" value='<?php echo $_SESSION['color']; ?>' data-wheelcolorpicker data-wcp-layout="block" data-wcp-sliders="ws" data-wcp-cssClass="color-block" data-wcp-autoResize="false" name="color"/>
+                                    <input type="text" value='<?php echo $_SESSION['color']; ?>' data-wheelcolorpicker data-wcp-layout="block" data-wcp-sliders="wvp" data-wcp-cssClass="color-block" data-wcp-autoResize="false" name="color"/>
                                     <button type="submit" class="btn btn-default" name="color_update">Update Color</button>
                                 </form>
                                 </p>

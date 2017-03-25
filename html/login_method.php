@@ -40,9 +40,9 @@ if(verify_account($email, $password) == TRUE){
     $_SESSION['email'] = $email;
 
 //    //grab use info to create session variable of first name
-//    include 'get_user_info.php';
-//    $_SESSION['first_name'] = $user_info['first_name'];
-
+    include 'get_user_info.php';
+    $_SESSION['fname'] = $user_info['fname'];
+    $_SESSION['color'] = $user_info['color'];
     //send logged in user to account page
 
 //iF FALSE, notify user and try again

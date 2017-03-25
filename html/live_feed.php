@@ -27,12 +27,16 @@ foreach($feed as $row){
     $delta_time = time() - strtotime($row['last_change']);
     $hours = floor($delta_time / 3600);
     $hours -= 5;
+    $d_seconds = $delta_time;
     $delta_time %= 3600;
     $minutes = floor($delta_time / 60);
-    $delta_time %= 3600;
+    $d_seconds %= 86400;
     $seconds = floor($delta_time / 60);
 ?> <tr>
-        <td><?php echo $row['color'];?></td>
+
+<!--        <td>--><?php //echo $row['color'];?><!--<span class="glyphicon glyphicon-one-fine-red-dot"></span></td>-->
+
+        <td><div class="circle" style="background-color: #<?php echo $row['color']; ?>"><span class="circle glyphicon glyphicon-remove-sign" style="visibility: hidden;"></span></div></td>
         <td><?php echo $row['fname']; echo ' '; echo $row['lname'];?></td>
         <td>
         <?php
