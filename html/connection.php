@@ -9,7 +9,7 @@
 
 $dsn = 'mysql:host=localhost;dbname=colorMe';
 $username= 'colorMe';
-$password = 'wOI^HH1!l3xx';
+$password = 'colorMecrazy';
 try {
     $db = new PDO($dsn, $username, $password);
 //    echo '<p>You are connected to the database!</p>';
