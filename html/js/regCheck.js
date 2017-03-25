@@ -118,7 +118,7 @@ function badField(id)
 {
     document.getElementById(id).style.backgroundColor = "#ffc6c6";
 }
-function submissionCheck()
+/* function submissionCheck()
 {
 	if(!(checkEmail('email') && ))
 	{
@@ -128,4 +128,4 @@ function submissionCheck()
 	{
 		document.forms['main_form'].submit();
 	}
-}
+} */
