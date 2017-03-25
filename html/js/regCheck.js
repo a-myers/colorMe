@@ -1,7 +1,7 @@
 function checkEmail(field)
 {
     //What To Check Againt
-    var inputParam = /^[A-Z0-9._%+-]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+    var inputParam = /(\S[^\.]*)(\.(\S*))?@(\S*)/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -20,7 +20,7 @@ function checkEmail(field)
 function checkPassword(field)
 {
     //What To Check Againt
-    var inputParam = /[[:alnum:]]{8,64}/;
+    var inputParam = /[a-z A-Z 0-9 ]{8,64}/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -38,9 +38,9 @@ function checkPassword(field)
 }
 function vCheckPassword(oPassword,vPassword)
 {
-	var oPassword = document.getElementById(oPassword);
-    var vPassword = document.getElementById(vPassword);
-    if(oPassword.value.match(vPassword))
+	var oPasswordt = document.getElementById(oPassword);
+    var vPasswordt = document.getElementById(vPassword);
+    if( oPasswordt.value.match(vPasswordt.value))
     {
         //Set Green Boarder
         goodField(vPassword);
@@ -56,7 +56,7 @@ function vCheckPassword(oPassword,vPassword)
 function checkFname(field)
 {
     //What To Check Againt
-    var inputParam = /[[:alnum:]]{8,64}/;
+    var inputParam = /[a-z A-Z]/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -75,7 +75,7 @@ function checkFname(field)
 function checkLname(field)
 {
     //What To Check Againt
-    var inputParam = /[[:alnum:]]{8,64}/;
+    var inputParam = /[a-z A-Z]/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
