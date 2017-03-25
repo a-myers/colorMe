@@ -8,8 +8,8 @@
 
 
 $dsn = 'mysql:host=localhost;dbname=colorMe';
-$username= 'admin';
-$password = 'DonaldTrump4Prez!';
+$username= 'colorMe';
+$password = 'wOI^HH1!l3xx';
 try {
     $db = new PDO($dsn, $username, $password);
 //    echo '<p>You are connected to the database!</p>';
