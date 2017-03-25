@@ -20,7 +20,7 @@ function checkEmail(field)
 function checkPassword(field)
 {
     //What To Check Againt
-    var inputParam = /[a-z A-Z 0-9 ]{8,64}/;
+    var inputParam = /\S{8,64}/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
