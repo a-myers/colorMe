@@ -48,6 +48,7 @@
 				E408D3CC1E864185007FFF48 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		E408D3CC1E864185007FFF48 /* Products */ = {
 			isa = PBXGroup;
