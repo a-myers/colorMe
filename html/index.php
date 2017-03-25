@@ -5,7 +5,7 @@
  * Date: 3/25/17
  * Time: 3:39 AM
  */
-include '/js/regCheck.js'
+include '/js/regCheck.js';
 include 'connection.php';
 
 session_start();
