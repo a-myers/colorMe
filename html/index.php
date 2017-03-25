@@ -10,6 +10,19 @@ include 'connection.php';
 
 session_start();
 
+if(isset($_SESSION['session_id'])) {
+    global $db;
+
+    $query = "SELECT color FROM users WHERE session_id = :session_id";
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(":session_id", $_SESSION['session_id']);
+    $statement->execute();
+    $colorarray = $statement->fetch();
+    $statement->closeCursor();
+
+    $_SESSION['color'] = $colorarray['color'];
+}
 
 ?>
 
@@ -65,10 +78,25 @@ if(isset($_POST['color_update'])) {
     $statement3->bindValue(':session_id', $_SESSION['session_id']);
     $statement3->execute();
     $statement3->closeCursor();
-
+    $_SESSION['color'] = $color;
+    $_SESSION['color_updated'] = 'yes';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
+}
+if(isset($_SESSION['color_updated'])) {
+    unset($_SESSION['color_updated']);
 }
 if(isset($_POST['login'])) {
     include 'login_method.php';
+    $_SESSION['logged_in'] = 'true';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
+
+}
+if(isset($_SESSION['logged_in'])) {
+    unset($_SESSION['logged_in']);
 
 }
 if(isset($_POST['logout'])) {
@@ -82,17 +110,92 @@ if(isset($_POST['logout'])) {
 
     unset($_SESSION['session_id']);
 
-    header('Location: index.php');
+    $_SESSION['logged_out'] = 'true';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
+} if(isset($_SESSION['logged_out'])) {
+    unset($_SESSION['logged_out']);
+    ?><div id="invite_modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>You have successfully Logged Out!</h4>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('invite_modal');
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        function index_modal() {
+            modal.style.display = "block";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <?php
 }
 if(isset($_POST['modal_register'])) {
     if($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
 
         include 'login_method.php';
+
+        $_SESSION['registered'] = 'true';
+        ?>
+        <script>	parent.window.location.reload(); </script>
+        <?php
+
+
     }
 }
+if($_SESSION['registered'] == 'true') {
+    unset($_SESSION['registered']);
+    ?>
+
+    <div id="invite_modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>You have successfully Registered!</h4>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('invite_modal');
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        function index_modal() {
+            modal.style.display = "block";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <?php
+}
 if(isset($_POST['register'])) {
-echo'hi';?>
+?>
 <div id="invite_modal" class="modal">
 
     <!-- Modal content -->
@@ -116,8 +219,13 @@ echo'hi';?>
             </div>
 
             <div class="form-group">
-                <label for="fname">Name</label>
+                <label for="fname">FirstName</label>
                 <input class="form-control" type="text" value='' name="fname" id="fname">
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input class="form-control" type="text" value='' name="lname" id="lname">
             </div>
 
             <div class="form-group">
@@ -134,19 +242,7 @@ echo'hi';?>
 <script>
     // Get the modal
     var modal = document.getElementById('invite_modal');
-
-    //            // Get the button that opens the modal
-    //            var btn = document.getElementById("invite_submit_btn");
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-    //
-    //            // When the user clicks the button, open the modal
-    //            btn.onclick = function() {
-    //                modal.style.display = "block";
-    //            }
-
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
@@ -154,8 +250,6 @@ echo'hi';?>
     function index_modal() {
         modal.style.display = "block";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -212,7 +306,7 @@ echo'hi';?>
                                 <p>
                                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
 
-                                    <input type="text" value="#ff8800" data-wheelcolorpicker data-wcp-layout="block" data-wcp-sliders="ws" data-wcp-cssClass="color-block" data-wcp-autoResize="false" name="color"/>
+                                    <input type="text" value='<?php echo $_SESSION['color']; ?>' data-wheelcolorpicker data-wcp-layout="block" data-wcp-sliders="ws" data-wcp-cssClass="color-block" data-wcp-autoResize="false" name="color"/>
                                     <button type="submit" class="btn btn-default" name="color_update">Update Color</button>
                                 </form>
                                 </p>

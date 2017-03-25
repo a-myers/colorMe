@@ -44,7 +44,6 @@ if(verify_account($email, $password) == TRUE){
 //    $_SESSION['first_name'] = $user_info['first_name'];
 
     //send logged in user to account page
-    header("Location: index.php");
 
 //iF FALSE, notify user and try again
 } else {
