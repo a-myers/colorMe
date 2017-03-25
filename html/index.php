@@ -72,7 +72,7 @@ body {
 if(isset($_POST['color_update'])) {
     $color = $_POST['color'];
     global $db;
-    $query = 'UPDATE users SET color = :color WHERE session_id = :session_id';
+    $query = 'UPDATE users SET color = :color, last_change = CURRENT_TIMESTAMP WHERE session_id = :session_id';
     $statement3 = $db->prepare($query);
     $statement3->bindValue(':color', $color);
     $statement3->bindValue(':session_id', $_SESSION['session_id']);
@@ -281,11 +281,8 @@ if(isset($_POST['register'])) {
 
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>o</td>
-                            <td>Andrew Myers</td>
-                            <td>updated 10 mins ago</td>
-                        </tr>
+                    <?php include 'live_feed.php';
+                    ?>
                     </tbody>
                 </table>
             </div>
