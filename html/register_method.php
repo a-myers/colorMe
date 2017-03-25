@@ -18,8 +18,8 @@ $phone = filter_input(INPUT_POST, 'phone');
 $hpassword = password_hash($password, PASSWORD_DEFAULT);
 
     global $db;
-    $query = "INSERT INTO users (fname, lname, email, password, phone)
-                  VALUES (:fname, :lname, :email, :password, :phone)";
+    $query = "INSERT INTO users (fname, lname, email, password, phone, color)
+                  VALUES (:fname, :lname, :email, :password, :phone, :color)";
 
     $statement = $db->prepare($query);
 
@@ -28,6 +28,7 @@ $statement->bindValue(':lname', $lname);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $hpassword);
     $statement->bindValue(':phone', $phone);
+    $statement->bindValue(':color', "#7aadff");
 
 
     $statement->execute();
