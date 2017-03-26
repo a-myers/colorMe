@@ -129,7 +129,3 @@ function submissionCheck(email,p1,p2,name,uname,phone)
 		document.forms['main_form'].submit();
 	}
 }
-function refresh()
-{ 
-    $( "live" ).load(window.location.href + "live" );
-}
