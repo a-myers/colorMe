@@ -327,7 +327,9 @@ if(isset($_POST['register'])) {
                     <div id="live" class="tab-pane fade in active">
                         <table class="table table-hover">
                             <thead class="no-margins">
-                            <br>
+
+                            <?php if(isset($_SESSION['session_id'])) { ?>
+<br>
                             <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form" id="user_input">
                                 <div class="input-group">
                                     <input type="text" class="form-control search" placeholder="Search" name="user_to_fol">
@@ -338,6 +340,7 @@ if(isset($_POST['register'])) {
                                     </div>
                                 </div>
                             </form>
+                            <?php } ?>
                             </thead>
                             <tbody>
 							<div id="livefeedref">

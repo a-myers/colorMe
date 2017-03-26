@@ -14,6 +14,14 @@ $lname = filter_input(INPUT_POST, 'lname');
 $password = filter_input(INPUT_POST, 'password');
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $phone = filter_input(INPUT_POST, 'phone');
+//
+//$acode = substr($phone, 1, 3);
+//$next3 = substr($phone, 6, 3);
+//$last4 = substr($phone, 10,4);
+//
+//$phoneint = $acode + $next3 + $last4;
+
+$phoneint = preg_replace("/[^0-9,.]/", "", $phone);
 
 $hpassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -27,7 +35,7 @@ $hpassword = password_hash($password, PASSWORD_DEFAULT);
 $statement->bindValue(':lname', $lname);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $hpassword);
-    $statement->bindValue(':phone', $phone);
+    $statement->bindValue(':phone', $phoneint);
     $statement->bindValue(':color', "7aadff");
 
 
