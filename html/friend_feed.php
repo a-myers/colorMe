@@ -57,7 +57,7 @@ foreach($feed as $row){
     $seconds = floor($delta_time / 60);
     ?> <tr>
 
-        <td><div class="circle" style="background-color: #<?php echo $row['color']; ?>"><span class="circle glyphicon glyphicon-remove-sign" style="visibility: hidden;"></span></div></td>
+        <td class="circle-div"><div class="circle" style="background-color: #<?php echo $row['color']; ?>"><span class="circle glyphicon glyphicon-remove-sign" style="visibility: hidden;"></span></div></td>
         <td><?php echo $row['lname'];?></td>
         <td>
             <?php
