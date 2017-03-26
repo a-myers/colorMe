@@ -242,7 +242,7 @@ if(isset($_POST['register'])) {
                 <input class="form-control" type="text" value='' name="phone" id="phone" onblur="checkPhone('phone')">
             </div>
 
-            <button type="button" class="btn btn-default" name="modal_register" onclick=submissionCheck('email','password','v_password','fname','lname','phone')>Register</button>
+            <button type="button" class="btn btn-default" name="modal_register" onclick="submissionCheck('email','password','v_password','fname','lname','phone')">Register</button>
         </form>
     </div>
 
