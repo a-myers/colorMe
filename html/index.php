@@ -211,7 +211,7 @@ if(isset($_POST['register'])) {
     <div class="modal-content">
         <span class="close">&times;</span>
         <h4>Complete Registration</h4>
-        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
+        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form" id="main_form">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input class="form-control" type="email" value='<?php echo $_POST["email"]; ?>' name="email" id="email" onblur="checkEmail('email')">
@@ -242,7 +242,7 @@ if(isset($_POST['register'])) {
                 <input class="form-control" type="text" value='' name="phone" id="phone" onblur="checkPhone('phone')">
             </div>
 
-            <button type="submit" class="btn btn-default" name="modal_register">Register</button>
+            <button type="button" class="btn btn-default" name="modal_register" onclick=submissionCheck('email','password','v_password','fname','lname','phone')>Register</button>
         </form>
     </div>
 

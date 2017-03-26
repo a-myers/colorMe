@@ -20,7 +20,7 @@ function checkEmail(field)
 function checkPassword(field)
 {
     //What To Check Againt
-    var inputParam = /[a-z A-Z 0-9 ]{8,64}/;
+    var inputParam = /\S{8,64}/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -75,7 +75,7 @@ function checkFname(field)
 function checkLname(field)
 {
     //What To Check Againt
-    var inputParam = /[a-z A-Z]/;
+    var inputParam = /\S{8,64}/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -118,9 +118,9 @@ function badField(id)
 {
     document.getElementById(id).style.backgroundColor = "#ffc6c6";
 }
-/* function submissionCheck()
+function submissionCheck(email,p1,p2,name,uname,phone)
 {
-	if(!(checkEmail('email') && ))
+	if(!(checkEmail('email') && checkPassword('p1') && vChekPassword('p1','p2') && checkFname('name') && checkLname('uname') && checkPhone('phone') ))
 	{
 		alert("There seems to be an issue, check your Input and make sure you agree to both satements.");
 	}
@@ -128,4 +128,4 @@ function badField(id)
 	{
 		document.forms['main_form'].submit();
 	}
-} */
+}
