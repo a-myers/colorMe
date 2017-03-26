@@ -228,12 +228,12 @@ if(isset($_POST['register'])) {
             </div>
 
             <div class="form-group">
-                <label for="fname">FirstName</label>
+                <label for="fname">First Name</label>
                 <input class="form-control" type="text" value='' name="fname" id="fname" onblur="checkFname('fname')">
             </div>
 
             <div class="form-group">
-                <label for="lname">Last Name</label>
+                <label for="lname">User Name</label>
                 <input class="form-control" type="text" value='' name="lname" id="lname" onblur="checkLname('lname')">
             </div>
 
