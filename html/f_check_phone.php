@@ -6,7 +6,7 @@
  * Time: 10:16 PM
  */
 
-function check_username($phone) {
+function check_phone($phone) {
     global $db;
     $query =  'SELECT phone FROM users WHERE phone = :phone';
 

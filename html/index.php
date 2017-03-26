@@ -142,11 +142,20 @@ if(isset($_POST['phone'])) {
     include 'f_check_username.php';
     $username_check_param = filter_input(INPUT_POST, 'lname');
     $username_check = check_username($username_check_param);
+
+    include 'f_check_phone.php';
+    $phone_check_param = filter_input(INPUT_POST, 'phone');
+    $phone_check = check_phone($phone_check_param);
+
+
     if ($email_check == TRUE) {
-        echo "<div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That email has already been registered. Try Logging in.</div></div><div class='col-sm-4'></div></div>";
+        echo "<br><div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That email has already been registered. Try Logging in.</div></div><div class='col-sm-4'></div></div>";
     } elseif ($username_check == TRUE) {
             $username_error = "That username has already been registered.";
-        echo "<div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That username has already been registered.</div></div><div class='col-sm-4'></div></div>";
+        echo "<br><div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That username has already been registered.</div></div><div class='col-sm-4'></div></div>";
+    } elseif ($phone_check == TRUE) {
+        $phone_error = "That username has already been registered.";
+        echo "<br><div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That phone number has already been registered.</div></div><div class='col-sm-4'></div></div>";
     } elseif ($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
         include 'login_method.php';
