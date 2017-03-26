@@ -62,8 +62,10 @@ foreach($feed as $row){
 
         <td><form class="no-margins" action="<?=$_SERVER['PHP_SELF'];?>" method="post" role="form">
                 <input type=hidden id="category" name="friend_id" value="<?php echo $row['id']; ?>">
+                <?php if(isset($_SESSION['session_id'])) { ?>
                 <button type="submit" class="button-feed" name="add-friend"><span class="glyphicon glyphicon-plus-sign button-glyph" aria-hidden="true"></span></button>
-            </form></td>
+                <?php } ?>
+        </form></td>
 
     </tr> <?php
 }

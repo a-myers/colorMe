@@ -288,7 +288,9 @@ if(isset($_POST['register'])) {
                 <hr>
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
+                    <?php if(isset($_SESSION['session_id'])) { ?>
                     <li><a data-toggle="tab" href="#friends">Friends</a></li>
+                    <?php } ?>
                     <button type="button" class="btn btn-default refresh" aria-label="Left Align" onclick="refreshFeed()">
                     <span class="glyphicon glyphicon-refresh refresh-span" aria-hidden="true"></span>
                     </button>
