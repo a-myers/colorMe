@@ -282,15 +282,25 @@ if(isset($_POST['register'])) {
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
                     <li><a data-toggle="tab" href="#friends">Friends</a></li>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </button>
                 </ul>
+
 
                 <div class="tab-content">
                     <div id="live" class="tab-pane fade in active">
                         <table class="table table-hover">
                             <thead>
-
+                            <form id="live-search" action="" class="styled" method="post">
+                                <fieldset>
+                                    <input type="text" class="text-input" id="filter" value="" />
+                                    <span id="filter-count"></span>
+                                </fieldset>
+                            </form>
                             </thead>
                             <tbody>
+
                             <?php include 'live_feed.php';
                             ?>
                             </tbody>

@@ -17,17 +17,17 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="154" column="29" lean-forward="false" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
+                <state relative-caret-position="281">
+                  <caret line="287" column="21" lean-forward="true" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
                   <folding>
                     <element signature="e#3607#3614#1#HTML" expanded="true" />
                     <element signature="e#6139#6146#1#HTML" expanded="true" />
                     <element signature="e#6916#6923#1#HTML" expanded="true" />
                     <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <marker date="1490505514000" expanded="true" signature="265:319" ph="SELECT color... users" />
-                    <marker date="1490505514000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
-                    <marker date="1490505514000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
+                    <marker date="1490505736000" expanded="true" signature="265:319" ph="SELECT color... users" />
+                    <marker date="1490505736000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
+                    <marker date="1490505736000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
                   </folding>
                 </state>
               </provider>
@@ -94,8 +94,8 @@
           <file leaf-file-name="wheelcolorpicker.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/wheelcolorpicker.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+                <state relative-caret-position="177">
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding>
                     <element signature="e#2332#2589#1" expanded="true" />
                   </folding>
@@ -316,7 +316,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30625000" />
+    <option name="totallyTimeSpent" value="30856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1280" height="735" extended-state="6" />
@@ -480,9 +480,9 @@
             <element signature="e#6916#6923#1#HTML" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490505514000" expanded="true" signature="265:319" ph="SELECT color... users" />
-            <marker date="1490505514000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
-            <marker date="1490505514000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
+            <marker date="1490505736000" expanded="true" signature="265:319" ph="SELECT color... users" />
+            <marker date="1490505736000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
+            <marker date="1490505736000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>
@@ -657,16 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/wheelcolorpicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#2332#2589#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/f_check_phone.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -677,19 +667,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/wheelcolorpicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#2332#2589#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="154" column="29" lean-forward="false" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
+        <state relative-caret-position="281">
+          <caret line="287" column="21" lean-forward="true" selection-start-line="287" selection-start-column="21" selection-end-line="287" selection-end-column="21" />
           <folding>
             <element signature="e#3607#3614#1#HTML" expanded="true" />
             <element signature="e#6139#6146#1#HTML" expanded="true" />
             <element signature="e#6916#6923#1#HTML" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490505514000" expanded="true" signature="265:319" ph="SELECT color... users" />
-            <marker date="1490505514000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
-            <marker date="1490505514000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
+            <marker date="1490505736000" expanded="true" signature="265:319" ph="SELECT color... users" />
+            <marker date="1490505736000" expanded="true" signature="2088:2183" ph="UPDATE users... " />
+            <marker date="1490505736000" expanded="true" signature="2947:3017" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>
