@@ -8,7 +8,7 @@
 
 function check_user_emails($email) {
     global $db;
-    $query =  'SELECT email FROM users WHERE email = :email';
+    $query =  'SELECT email FROM users WHERE UPPER(email) = UPPER(:email)';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);

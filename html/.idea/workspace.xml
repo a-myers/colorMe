@@ -47,10 +47,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="register_method.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="register_method.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/register_method.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
+                <state relative-caret-position="347">
                   <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding>
                     <marker date="1490541210000" expanded="true" signature="658:798" ph="INSERT INTO users... " />
@@ -62,10 +62,23 @@
           <file leaf-file-name="f_check_username.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/f_check_username.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+                <state relative-caret-position="225">
+                  <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
                   <folding>
-                    <marker date="1490530585000" expanded="true" signature="157:201" ph="SELECT lname... users" />
+                    <marker date="1490541749000" expanded="true" signature="159:216" ph="SELECT lname... users" />
+                    <marker date="1490541749000" expanded="true" signature="159:217" ph="SELECT lname... users" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="f_check_user_emails.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/f_check_user_emails.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+                  <folding>
+                    <marker date="1490541864000" expanded="true" signature="160:218" ph="SELECT email... users" />
                   </folding>
                 </state>
               </provider>
@@ -205,7 +218,6 @@
         <option value="$PROJECT_DIR$/css/styles.php" />
         <option value="$PROJECT_DIR$/get_user_info.php" />
         <option value="$PROJECT_DIR$/login_method.php" />
-        <option value="$PROJECT_DIR$/f_check_username.php" />
         <option value="$PROJECT_DIR$/f_add_friend.php" />
         <option value="$PROJECT_DIR$/f_remove_friend.php" />
         <option value="$PROJECT_DIR$/f_check_phone.php" />
@@ -218,6 +230,8 @@
         <option value="$PROJECT_DIR$/f_add_friend_search.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/register_method.php" />
+        <option value="$PROJECT_DIR$/f_check_username.php" />
+        <option value="$PROJECT_DIR$/f_check_user_emails.php" />
       </list>
     </option>
   </component>
@@ -457,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38977000" />
+    <option name="totallyTimeSpent" value="39468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1280" height="735" extended-state="6" />
@@ -617,7 +631,8 @@
         <state relative-caret-position="195">
           <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding>
-            <marker date="1490530585000" expanded="true" signature="157:201" ph="SELECT lname... users" />
+            <marker date="1490541749000" expanded="true" signature="159:216" ph="SELECT lname... users" />
+            <marker date="1490541749000" expanded="true" signature="159:217" ph="SELECT lname... users" />
           </folding>
         </state>
       </provider>
@@ -806,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/f_check_user_emails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/regCheck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1394">
@@ -907,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/f_check_username.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <marker date="1490530585000" expanded="true" signature="157:201" ph="SELECT lname... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -976,10 +973,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/register_method.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="347">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <marker date="1490541210000" expanded="true" signature="658:798" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/f_check_username.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <marker date="1490541749000" expanded="true" signature="159:216" ph="SELECT lname... users" />
+            <marker date="1490541749000" expanded="true" signature="159:217" ph="SELECT lname... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/f_check_user_emails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+          <folding>
+            <marker date="1490541864000" expanded="true" signature="160:218" ph="SELECT email... users" />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,9 @@
 
 function check_username($lname) {
     global $db;
-    $query =  'SELECT lname FROM users WHERE lname = :lname';
+
+
+    $query =  'SELECT lname FROM users WHERE UPPER(lname) = UPPER(:lname)';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':lname', $lname);
