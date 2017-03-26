@@ -1,3 +1,4 @@
+
 <script type="text/javascript" src="js/regCheck.js"></script>
 <?php
 /**
@@ -404,5 +405,4 @@ if(isset($_POST['register'])) {
 <script src="../css/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.min.js"></script>
 
 </body>
-
 </html>
