@@ -79,21 +79,20 @@ if(isset($_POST['color_update'])) {
     $statement3->execute();
     $statement3->closeCursor();
     $_SESSION['color'] = $color;
-//    $_SESSION['color_updated'] = 'yes';
-//    ?>
-<!--    <script>	parent.window.location.replace('index.php'); </script>-->
-<!--    --><?php
+    $_SESSION['color_updated'] = 'yes';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
 }
 if(isset($_SESSION['color_updated'])) {
     unset($_SESSION['color_updated']);
 }
 if(isset($_POST['login'])) {
     include 'login_method.php';
-//    $_SESSION['logged_in'] = 'true';
-	unset($_POST['login']);
-//    ?>
-<!--    <script>	parent.window.location.replace('index.php'); </script>-->
-<!--    --><?php
+    $_SESSION['logged_in'] = 'true';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
 
 }
 if(isset($_SESSION['logged_in'])) {
@@ -111,12 +110,10 @@ if(isset($_POST['logout'])) {
 
     unset($_SESSION['session_id']);
 
-//    $_SESSION['logged_out'] = 'true';
-//
-//    ?>
-<!--    <script>	parent.window.location.replace('index.php'); </script>-->
-<!--    --><?php
-
+    $_SESSION['logged_out'] = 'true';
+    ?>
+    <script>	parent.window.location.reload(); </script>
+    <?php
 } if(isset($_SESSION['logged_out'])) {
     unset($_SESSION['logged_out']);
     ?><div id="invite_modal" class="modal">
@@ -155,8 +152,11 @@ if(isset($_POST['modal_register'])) {
 
         include 'login_method.php';
 
-        //$_SESSION['registered'] = 'true';-->
-//        header("Location: index.php");
+        $_SESSION['registered'] = 'true';
+        ?>
+        <script>	parent.window.location.reload(); </script>
+        <?php
+
 
     }
 }
