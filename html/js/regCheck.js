@@ -122,7 +122,7 @@ function submissionCheck(email,p1,p2,name,uname,phone)
 {
 	if(!(checkEmail('email') && checkPassword('password') && vCheckPassword('password','v_password') && checkFname('fname') && checkLname('lname') && checkPhone('phone') ))
 	{
-		alert("There seems to be an issue, check your Input and make sure you agree to both satements.");
+		alert("There seems to be an issue with you input! Check to be sure all fields are properly filled.");
 	}
 	else
 	{
