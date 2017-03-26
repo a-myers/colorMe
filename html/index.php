@@ -155,12 +155,19 @@ if(isset($_POST['phone'])) {
     $username_check_param = filter_input(INPUT_POST, 'lname');
     $username_check = check_username($username_check_param);
 
+    include 'f_check_phone.php';
+    $phone_check_param = filter_input(INPUT_POST, 'phone');
+    $phone_check = check_username($phone_check_param);
+
     if ($email_check == TRUE) {
         $email_error = "That email has already been registered. Try Logging in. Hide and Seek";
         echo $email_error;
     } elseif ($username_check == TRUE) {
             $username_error = "That username has already been registered.";
             echo $username_error;
+    } elseif ($phone_check == TRUE) {
+        $phone_error = "That phone numbver has already been registered.";
+        echo $phone_error;
     } elseif ($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
 
