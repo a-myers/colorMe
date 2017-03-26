@@ -129,3 +129,13 @@ function submissionCheck(email,p1,p2,name,uname,phone)
 		document.forms['main_form'].submit();
 	}
 }
+function refreshFeed ()
+{
+        $.ajax({
+          url: "index.php",
+          cache: false,
+          success: function(data){
+             $("#auto_load_div").html(data);
+          } 
+        });
+}
