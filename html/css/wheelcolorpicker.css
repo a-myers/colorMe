@@ -27,7 +27,7 @@
 .jQWCP-wWidget.jQWCP-block {
 	position: relative;
 	border-color: #aaa;
-	box-shadow: inset 1px 1px 1px #ccc;
+	/*box-shadow: inset 1px 1px 1px #ccc;*/
 }
 
 .jQWCP-wWheel {
