@@ -131,5 +131,5 @@ function submissionCheck(email,p1,p2,name,uname,phone)
 }
 function refresh()
 { 
-    $( "friends" ).load(window.location.href + "friends" );
+    $( "live" ).load(window.location.href + "live" );
 }
