@@ -267,9 +267,11 @@ if(isset($_POST['register'])) {
             <!-- Brand and toggle get grouped for better mobile display -->
             <div style="display:flex;justify-content:center;align-items:center;">
                 <h1 id="title">colorMe</h1>
+                <?php if(isset($_SESSION['session_id'])) { ?>
                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal form-nav" role="form">
                     <button type="submit" class="white btn" name="logout">Logout</button>
                 </form>
+                <?php } ?>
             </div>
 
         </div>
@@ -366,8 +368,11 @@ if(isset($_POST['register'])) {
                                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
 
                                     <input type="text" value='<?php echo $_SESSION['color']; ?>' data-wheelcolorpicker data-wcp-layout="block" data-wcp-sliders="wvp" data-wcp-cssClass="color-block" data-wcp-autoResize="false" name="color"/>
-                                    <button type="submit" class="btn btn-default" name="color_update">Update Color</button>
-                                </form>
+                            <br>
+                            <div class="wrapper">
+                                        <button type="submit" class="btn btn-default btn-color" name="color_update">Update Color</button>
+                                    </div>
+                            </form>
                                 </p>
                                 <style type="text/css">
                                     .color-block {
@@ -387,11 +392,12 @@ if(isset($_POST['register'])) {
 
 
                 <h3>Login or Register</h3>
-                <table class="table">
-                    <thead></thead>
-                    <tbody>
-                    <tr>
-                        <td>
+                    <hr>
+<!--                <table class="table">-->
+<!--                    <thead></thead>-->
+<!--                    <tbody>-->
+<!--                    <tr>-->
+<!--                        <td>-->
                             <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
@@ -406,10 +412,10 @@ if(isset($_POST['register'])) {
                                 <button type="submit" class="btn btn-default" name="login">Log In</button>
                                 <button type="submit" class="btn btn-default" name="register">Register</button>
                             </form>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
 
                 <?php } ?>
 

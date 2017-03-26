@@ -184,3 +184,13 @@ table.no-wrap td {
     background-color: transparent;
     font-size: 20px;
 }
+
+.btn-color {
+    position: relative;
+    font-size: 20px;
+}
+
+.wrapper {
+    text-align: center;
+    top: 5px;
+}
