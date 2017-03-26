@@ -79,10 +79,10 @@ if(isset($_POST['color_update'])) {
     $statement3->execute();
     $statement3->closeCursor();
     $_SESSION['color'] = $color;
-    $_SESSION['color_updated'] = 'yes';
-    ?>
-    <script>	parent.window.location.reload(); </script>
-    <?php
+//    $_SESSION['color_updated'] = 'yes';
+//    ?>
+<!--    <script>	parent.window.location.reload(); </script>-->
+<!--    --><?php
 }
 if(isset($_SESSION['color_updated'])) {
     unset($_SESSION['color_updated']);
