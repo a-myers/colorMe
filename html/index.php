@@ -309,7 +309,10 @@ if(isset($_POST['register'])) {
 
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-5 above">
+
+
+
+            <div class="col-md-5 above hidden-xs hidden-sm">
                 <h3>How are your friends?</h3>
                 <hr>
                 <ul class="nav nav-tabs">
@@ -364,6 +367,11 @@ if(isset($_POST['register'])) {
                 </div>
 
             </div>
+
+
+
+
+
             <div class="col-md-4 above">
 
                 <?php
@@ -433,6 +441,65 @@ if(isset($_POST['register'])) {
 <!--                </table>-->
 
                 <?php } ?>
+
+            </div>
+
+
+
+
+            <div class="col-md-5 above hidden-md hidden-lg">
+                <h3>How are your friends?</h3>
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
+                    <?php if(isset($_SESSION['session_id'])) { ?>
+                        <li><a data-toggle="tab" href="#friends">Friends</a></li>
+                    <?php } ?>
+                    <button type="button" class="btn btn-default refresh" aria-label="Left Align" onclick="refreshFeed()">
+                        <span class="glyphicon glyphicon-refresh refresh-span" aria-hidden="true"></span>
+                    </button>
+                </ul>
+
+
+                <div class="tab-content" >
+                    <div id="live" class="tab-pane fade in active">
+                        <table class="table table-hover">
+                            <thead class="no-margins">
+
+                            <?php if(isset($_SESSION['session_id'])) { ?>
+                                <br>
+                                <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form" id="user_input">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search" placeholder="Search" name="user_to_fol">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit" name="user_input">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <?php } ?>
+                            </thead>
+                            <tbody>
+                            <div id="livefeedref">
+                                <?php include 'live_feed.php';
+                                ?>
+                            </div>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="friends" class="tab-pane fade">
+                        <table class="table table-hover">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+                            <?php include 'friend_feed.php';
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-1"></div>
