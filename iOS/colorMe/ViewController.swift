@@ -70,9 +70,15 @@ class ViewController: UIViewController, ISColorWheelDelegate {
 		
 		self.view.addSubview(submitButton!)
 
-		
+		currentColor = getColorFromDatabase()
+		//print(currentColor)
+		//self.view.backgroundColor = self.currentColor
         
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		//self.view.backgroundColor = self.currentColor
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -129,6 +135,51 @@ class ViewController: UIViewController, ISColorWheelDelegate {
 		return String.localizedStringWithFormat("%02lX%02lX%02lX", lroundf(Float(CGFloat(r * 255))),
 		                                        lroundf(Float(CGFloat(g * 255))),
 		                                        lroundf(Float(CGFloat(b * 255))))
+	}
+	
+	func getColorFromDatabase() -> UIColor {
+		
+		let scriptUrl = "http://174.138.95.169/getColorFromPhone.php?phone="+phone
+		print(scriptUrl)
+		let myUrl = URL(string: scriptUrl)
+		
+		var color: UIColor = UIColor.white;
+		var r: Int = 0;
+		var g: Int = 0;
+		var b: Int = 0;
+		
+		let task = URLSession.shared.dataTask(with:myUrl!) { (data, response, error) in
+			if error != nil {
+				print(error)
+			} else {
+				do {
+					
+					let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Int]
+					print(parsedData)
+					
+					r = parsedData["r"]! as Int
+					g = parsedData["g"]! as Int
+					b = parsedData["b"]! as Int
+					
+					print(r,g,b)
+					
+					color = UIColor(colorLiteralRed: Float(Double(r)/255.0), green: Float(Double(g)/255.0), blue: Float(Double(b)/255.0), alpha: 1.0)
+					self.view.backgroundColor = color
+					print(color)
+					//color = UIColor(red: CGFloat(Double(r)/255.0), green: CGFloat(Double(g)/255.0), blue: CGFloat(Double(b)/255.0), alpha: 1.0)
+					
+					//print(parsedData)
+					
+				
+				} catch let error as NSError {
+					print(error)
+				}
+			}
+			}
+		
+		task.resume()
+
+		return color;//UIColor(red: CGFloat(Double(r)/255.0), green: CGFloat(Double(g)/255.0), blue: CGFloat(Double(b)/255.0), alpha: 1.0)
 	}
 	
 
