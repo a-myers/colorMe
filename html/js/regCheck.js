@@ -40,7 +40,7 @@ function vCheckPassword(oPassword,vPassword)
 {
 	var oPasswordt = document.getElementById(oPassword);
     var vPasswordt = document.getElementById(vPassword);
-    if( oPasswordt.value.match(vPasswordt.value))
+    if(oPasswordt.value == vPasswordt.value)
     {
         //Set Green Boarder
         goodField(vPassword);
@@ -75,7 +75,7 @@ function checkFname(field)
 function checkLname(field)
 {
     //What To Check Againt
-    var inputParam = /\S{8,64}/;
+    var inputParam = /\S/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
@@ -120,7 +120,7 @@ function badField(id)
 }
 function submissionCheck(email,p1,p2,name,uname,phone)
 {
-	if(!(checkEmail('email') && checkPassword('p1') && vChekPassword('p1','p2') && checkFname('name') && checkLname('uname') && checkPhone('phone') ))
+	if(!(checkEmail('email') && checkPassword('password') && vCheckPassword('password','v_password') && checkFname('fname') && checkLname('lname') && checkPhone('phone') ))
 	{
 		alert("There seems to be an issue, check your Input and make sure you agree to both satements.");
 	}

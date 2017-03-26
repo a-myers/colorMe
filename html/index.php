@@ -89,10 +89,10 @@ if(isset($_SESSION['color_updated'])) {
 }
 if(isset($_POST['login'])) {
     include 'login_method.php';
-    $_SESSION['logged_in'] = 'true';
+/*     $_SESSION['logged_in'] = 'true';
     ?>
     <script>	parent.window.location.reload(); </script>
-    <?php
+    <?php */
 
 }
 if(isset($_SESSION['logged_in'])) {
@@ -110,10 +110,10 @@ if(isset($_POST['logout'])) {
 
     unset($_SESSION['session_id']);
 
-    $_SESSION['logged_out'] = 'true';
+   /*  $_SESSION['logged_out'] = 'true';
     ?>
     <script>	parent.window.location.reload(); </script>
-    <?php
+    <?php */
 } if(isset($_SESSION['logged_out'])) {
     unset($_SESSION['logged_out']);
     ?><div id="invite_modal" class="modal">
@@ -146,7 +146,7 @@ if(isset($_POST['logout'])) {
 
     <?php
 }
-if(isset($_POST['modal_register'])) {
+if(isset($_POST['phone'])) {
     include 'f_check_user_emails.php';
     $email_check_param = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $email_check = check_user_emails($email_check_param);
@@ -156,24 +156,20 @@ if(isset($_POST['modal_register'])) {
     $username_check = check_username($username_check_param);
 
     if ($email_check == TRUE) {
-        $email_error = "That email has already been registered. Try Logging in.";
+        $email_error = "That email has already been registered. Try Logging in. Hide and Seek";
         echo $email_error;
     } elseif ($username_check == TRUE) {
             $username_error = "That username has already been registered.";
             echo $username_error;
-    } elseif(strlen($_POST['password']) < 8) {
-        $psw_len_error = "The password you entered is too short. It must be at least 8 characters.";
-        echo $psw_len_error;
-
     } elseif ($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
 
         include 'login_method.php';
 
-        $_SESSION['registered'] = 'true';
+/*         $_SESSION['registered'] = 'true';
         ?>
         <script>	parent.window.location.reload(); </script>
-        <?php
+        <?php */
     }
 }
 if($_SESSION['registered'] == 'true') {
