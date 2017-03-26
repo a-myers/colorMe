@@ -287,9 +287,9 @@ if(isset($_POST['register'])) {
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
                     <li><a data-toggle="tab" href="#friends">Friends</a></li>
-                    <button type="button" class="btn btn-default refresh" aria-label="Left Align" onclick="refreshFeed()'>
+                  /*   <button type="button" class="btn btn-default refresh" aria-label="Left Align" onclick="refreshFeed()'>
                         <span class="glyphicon glyphicon-refresh refresh-span" aria-hidden="true"></span>
-                    </button>
+                    </button> */
                 </ul>
 
 
@@ -323,6 +323,28 @@ if(isset($_POST['register'])) {
                         </table>
                     </div>
                 </div>
+				
+					<script>
+					  function auto_load(){
+						$.ajax({
+						  url: "data.php",
+						  cache: false,
+						  success: function(data){
+							 $("#auto_load_div").html(data);
+						  } 
+						});
+					  }
+				 
+					  $(document).ready(function(){
+				 
+						auto_load(); //Call auto_load() function when DOM is Ready
+				 
+					  });
+				 
+					  //Refresh auto_load() function after 10000 milliseconds
+					  setInterval(auto_load,10000);
+				   </script>
+				
 
             </div>
             <div class="col-md-4 above">
