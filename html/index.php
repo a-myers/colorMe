@@ -33,7 +33,7 @@ if(isset($_SESSION['session_id'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>colorMe</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -282,8 +282,8 @@ if(isset($_POST['register'])) {
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
                     <li><a data-toggle="tab" href="#friends">Friends</a></li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    <button type="button" class="btn btn-default refresh" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-refresh refresh-span" aria-hidden="true"></span>
                     </button>
                 </ul>
 
@@ -291,10 +291,10 @@ if(isset($_POST['register'])) {
                 <div class="tab-content">
                     <div id="live" class="tab-pane fade in active">
                         <table class="table table-hover">
-                            <thead>
+                            <thead class="no-margins">
                             <form id="live-search" action="" class="styled" method="post">
                                 <fieldset>
-                                    <input type="text" class="text-input" id="filter" value="" />
+                                    <input type="text" class="text-input search" id="filter" value="" placeholder="Search..." />
                                     <span id="filter-count"></span>
                                 </fieldset>
                             </form>
@@ -312,7 +312,7 @@ if(isset($_POST['register'])) {
 
                             </thead>
                             <tbody>
-                            <?php include 'live_feed.php';
+                            <?php include 'friend_feed.php';
                             ?>
                             </tbody>
                         </table>
