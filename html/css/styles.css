@@ -207,5 +207,6 @@ table.no-wrap td {
 }
 
 .higher_modal {
-    margin-top: -180px !important;
+    margin-top: -50px !important;
+    width: 80%;
 }
