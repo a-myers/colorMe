@@ -81,6 +81,13 @@ body {
 
 <body>
 <?php
+if(isset($_POST['user_input'])) {
+    include include 'get_user_info.php';
+    $follower = $user_info['id'];
+    include 'f_add_friend_search.php';
+    $following = $_POST['user_to_fol'];
+    add_friend_search($follower, $following);
+}
 if(isset($_POST['color_update'])) {
     $color = $_POST['color'];
     global $db;
@@ -320,11 +327,16 @@ if(isset($_POST['register'])) {
                     <div id="live" class="tab-pane fade in active">
                         <table class="table table-hover">
                             <thead class="no-margins">
-                            <form id="live-search" action="" class="styled" method="post">
-                                <fieldset>
-                                    <input type="text" class="text-input search" id="filter" value="" placeholder="Search..." />
-                                    <span id="filter-count"></span>
-                                </fieldset>
+                            <br>
+                            <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form" id="user_input">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search" placeholder="Search" name="user_to_fol">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" name="user_input">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </form>
                             </thead>
                             <tbody>
