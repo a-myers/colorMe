@@ -75,7 +75,7 @@ function checkFname(field)
 function checkLname(field)
 {
     //What To Check Againt
-    var inputParam = /\S/;
+    var inputParam = /\S{0,12}/;
     //What Were Checking
     var valCheck = document.getElementById(field);
     if(valCheck.value.match(inputParam))
