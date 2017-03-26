@@ -123,3 +123,16 @@ table.no-wrap td {
     border: none;
     background-color: white;
 }
+
+.button-glyph {
+    color: green;
+}
+
+.button-f-glyph {
+    color: red;
+}
+
+.no-margins {
+    margin: 0 0;
+    padding: 0 0;
+}

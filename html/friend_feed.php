@@ -1,3 +1,7 @@
+
+
+
+
 <?php
 /**
  * Created by PhpStorm.
@@ -6,26 +10,39 @@
  * Time: 1:38 PM
  */
 
+include 'get_user_info.php';
+if(isset($_POST['remove-friend'])) {
+    include 'get_user_info.php';
+    $follower = $user_info['id'];
+    include 'f_remove_friend.php';
+    $following = $_POST['friend_id'];
+    remove_friend($follower, $following);
+}
 
 global $db;
-$query = "SELECT * FROM users ORDER BY last_change DESC";
+$query = "SELECT following FROM followers WHERE follower = :follower";
 $statement = $db->prepare($query);
+$statement->bindValue(':follower', $user_info['id']);
 $statement->execute();
-$feed= $statement->fetchAll();
+$friends= $statement->fetchAll();
 $statement->closeCursor();
-
+//echo $user_info['id'];
+//echo $friends;
+//var_dump($friends);
 //var_dump($feed);
 //echo $feed[0];
 //echo $feed[1];
+$array = array();
 
-if(isset($_POST['add-friend'])) {
-    include 'get_user_info.php';
-    $follower = $user_info['id'];
-    include 'f_add_friend.php';
-    $following = $_POST['friend_id'];
-    add_friend($follower, $following);
+foreach($friends as $a){
+    array_push($array, $a[0]);
 }
 
+$sql = "SELECT * FROM users WHERE id IN (" . implode(',', array_map('intval', $array)).") ORDER BY last_change DESC";
+$statement = $db->prepare($sql);
+$statement->execute();
+$feed = $statement->fetchAll();
+$statement->closeCursor();
 
 
 foreach($feed as $row){
@@ -62,8 +79,7 @@ foreach($feed as $row){
 
         <td><form class="no-margins" action="<?=$_SERVER['PHP_SELF'];?>" method="post" role="form">
                 <input type=hidden id="category" name="friend_id" value="<?php echo $row['id']; ?>">
-                <button type="submit" class="button-feed" name="add-friend"><span class="glyphicon glyphicon-plus-sign button-glyph" aria-hidden="true"></span></button>
+                <button type="submit" class="button-feed" name="remove-friend"><span class="glyphicon glyphicon-minus-sign button-f-glyph" aria-hidden="true"></span></button>
             </form></td>
-
     </tr> <?php
 }

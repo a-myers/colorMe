@@ -312,7 +312,7 @@ if(isset($_POST['register'])) {
 
                             </thead>
                             <tbody>
-                            <?php include 'live_feed.php';
+                            <?php include 'friend_feed.php';
                             ?>
                             </tbody>
                         </table>
