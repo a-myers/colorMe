@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Clayton Webb" id="IYv-Vt-d8l">
                         <barButtonItem key="rightBarButtonItem" title="Friends" id="T9u-YU-N9J">
                             <connections>
-                                <segue destination="fOc-rF-y4p" kind="show" id="SRu-w0-m5m"/>
+                                <segue destination="77G-Cp-O05" kind="show" id="bRS-cW-6LV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,18 +51,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPf-ik-H75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480.80000000000001" y="61.619190404797607"/>
+            <point key="canvasLocation" x="473" y="-305"/>
         </scene>
-        <!--Feed View Controller-->
-        <scene sceneID="Yxb-zf-8Zy">
+        <!--Root View Controller-->
+        <scene sceneID="g2K-iC-7HN">
             <objects>
-                <tableViewController id="fOc-rF-y4p" customClass="FeedViewController" customModule="colorMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" id="YM5-b1-Ggg">
+                <tableViewController id="77G-Cp-O05" customClass="FeedViewController" customModule="colorMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x2Q-M1-Oos">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="7nE-cT-AHC" customClass="FeedCell" customModule="colorMe" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="59" id="7nE-cT-AHC" customClass="FeedCell" customModule="colorMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7nE-cT-AHC" id="rof-iq-XXM">
@@ -91,14 +90,21 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="fOc-rF-y4p" id="jfs-ba-RLB"/>
-                            <outlet property="delegate" destination="fOc-rF-y4p" id="Hox-D2-pH6"/>
+                            <outlet property="dataSource" destination="77G-Cp-O05" id="jgC-S9-IxN"/>
+                            <outlet property="delegate" destination="77G-Cp-O05" id="y8f-KH-8sw"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="EFD-RF-Pn6"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="bZH-lJ-gu2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="tblView" destination="x2Q-M1-Oos" id="0Sa-Gl-zxN"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-CP-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vng-5u-Jrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250.4000000000001" y="59.820089955022496"/>
+            <point key="canvasLocation" x="1359" y="-271"/>
         </scene>
     </scenes>
 </document>

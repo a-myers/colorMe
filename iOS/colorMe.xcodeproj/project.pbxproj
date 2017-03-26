@@ -10,7 +10,6 @@
 		4E0C892E1E86565C002CB9F1 /* ISColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C892D1E86565C002CB9F1 /* ISColorWheel.m */; };
 		4E0C89301E869317002CB9F1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C892F1E869317002CB9F1 /* FeedViewController.swift */; };
 		4E0C89321E86CEE9002CB9F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C89311E86CEE9002CB9F1 /* Person.swift */; };
-		4E0C89341E86CFA2002CB9F1 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C89331E86CFA2002CB9F1 /* Sources */; };
 		E408D3CF1E864185007FFF48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E408D3CE1E864185007FFF48 /* AppDelegate.swift */; };
 		E408D3D11E864185007FFF48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E408D3D01E864185007FFF48 /* ViewController.swift */; };
 		E408D3D41E864185007FFF48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E408D3D21E864185007FFF48 /* Main.storyboard */; };
@@ -24,7 +23,6 @@
 		4E0C892D1E86565C002CB9F1 /* ISColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISColorWheel.m; sourceTree = "<group>"; };
 		4E0C892F1E869317002CB9F1 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		4E0C89311E86CEE9002CB9F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		4E0C89331E86CFA2002CB9F1 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 		E408D3CB1E864185007FFF48 /* colorMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E408D3CE1E864185007FFF48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E408D3D01E864185007FFF48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		E408D3CD1E864185007FFF48 /* colorMe */ = {
 			isa = PBXGroup;
 			children = (
-				4E0C89331E86CFA2002CB9F1 /* Sources */,
 				4E0C892C1E86565C002CB9F1 /* ISColorWheel.h */,
 				4E0C892D1E86565C002CB9F1 /* ISColorWheel.m */,
 				E408D3CE1E864185007FFF48 /* AppDelegate.swift */,
@@ -145,7 +142,6 @@
 				E408D3D91E864185007FFF48 /* LaunchScreen.storyboard in Resources */,
 				E408D3D61E864185007FFF48 /* Assets.xcassets in Resources */,
 				E408D3D41E864185007FFF48 /* Main.storyboard in Resources */,
-				4E0C89341E86CFA2002CB9F1 /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
