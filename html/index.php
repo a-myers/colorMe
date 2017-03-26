@@ -147,7 +147,18 @@ if(isset($_POST['logout'])) {
     <?php
 }
 if(isset($_POST['modal_register'])) {
-    if($_POST['password'] == $_POST['v_password']) {
+    include 'f_check_user_emails.php';
+    $email_check_param = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $email_check = check_user_emails($email_check_param);
+
+    if ($email_check == TRUE) {
+        $email_error = "That email has already been registered. Try Logging in.";
+        echo $email_error;
+    } elseif(strlen($_POST['password']) < 8) {
+        $psw_len_error = "The password you entered is too short. It must be at least 8 characters.";
+        echo $psw_len_error;
+
+    } elseif ($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
 
         include 'login_method.php';
@@ -156,8 +167,6 @@ if(isset($_POST['modal_register'])) {
         ?>
         <script>	parent.window.location.reload(); </script>
         <?php
-
-
     }
 }
 if($_SESSION['registered'] == 'true') {
