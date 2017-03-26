@@ -73,10 +73,10 @@ if(isset($_POST['color_update'])) {
     $statement3->execute();
     $statement3->closeCursor();
     $_SESSION['color'] = $color;
-    $_SESSION['color_updated'] = 'yes';
+ /*    $_SESSION['color_updated'] = 'yes';
     ?>
     <script>	parent.window.location.reload(); </script>
-    <?php
+    <?php */
 }
 if(isset($_SESSION['color_updated'])) {
     unset($_SESSION['color_updated']);
@@ -143,11 +143,10 @@ if(isset($_POST['phone'])) {
     $username_check_param = filter_input(INPUT_POST, 'lname');
     $username_check = check_username($username_check_param);
     if ($email_check == TRUE) {
-        $email_error = "That email has already been registered. Try Logging in. Hide and Seek";
-        echo $email_error;
+        echo "<div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That email has already been registered. Try Logging in.</div></div><div class='col-sm-4'></div></div>";
     } elseif ($username_check == TRUE) {
             $username_error = "That username has already been registered.";
-            echo $username_error;
+        echo "<div class='row'><div class='col-sm-4'></div><div class='col-sm-4'><div class='alert alert-danger'>That username has already been registered.</div></div><div class='col-sm-4'></div></div>";
     } elseif ($_POST['password'] == $_POST['v_password']) {
         include 'register_method.php';
         include 'login_method.php';
