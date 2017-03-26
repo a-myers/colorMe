@@ -118,3 +118,8 @@ table.no-wrap td {
     size: 10px 10px 10px 10px;
     color: red;
 }
+
+.button-feed {
+    border: none;
+    background-color: white;
+}

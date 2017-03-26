@@ -34,10 +34,8 @@ foreach($feed as $row){
     $seconds = floor($delta_time / 60);
 ?> <tr>
 
-<!--        <td>--><?php //echo $row['color'];?><!--<span class="glyphicon glyphicon-one-fine-red-dot"></span></td>-->
-
         <td><div class="circle" style="background-color: #<?php echo $row['color']; ?>"><span class="circle glyphicon glyphicon-remove-sign" style="visibility: hidden;"></span></div></td>
-        <td><?php echo $row['fname']; echo ' '; echo $row['lname'];?></td>
+        <td><?php echo $row['lname'];?></td>
         <td>
         <?php
         if($hours == 1) {
@@ -55,6 +53,8 @@ foreach($feed as $row){
         }
         ?>
         </td>
-<!--        <td>--><?php //echo $row['last_change'];?><!--</td>-->
+
+        <td><button type="submit" class="button-feed"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button></td>
+
     </tr> <?php
 }

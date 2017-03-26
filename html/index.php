@@ -151,9 +151,16 @@ if(isset($_POST['modal_register'])) {
     $email_check_param = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $email_check = check_user_emails($email_check_param);
 
+    include 'f_check_username.php';
+    $username_check_param = filter_input(INPUT_POST, 'lname');
+    $username_check = check_username($username_check_param);
+
     if ($email_check == TRUE) {
         $email_error = "That email has already been registered. Try Logging in.";
         echo $email_error;
+    } elseif ($username_check == TRUE) {
+            $username_error = "That username has already been registered.";
+            echo $username_error;
     } elseif(strlen($_POST['password']) < 8) {
         $psw_len_error = "The password you entered is too short. It must be at least 8 characters.";
         echo $psw_len_error;
@@ -284,16 +291,38 @@ if(isset($_POST['register'])) {
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-5 above">
-                <h3>Feed</h3>
-                <table class="table table-hover">
-                    <thead>
+                <h3>How are your friends?</h3>
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
+                    <li><a data-toggle="tab" href="#friends">Friends</a></li>
+                </ul>
 
-                    </thead>
-                    <tbody>
-                    <?php include 'live_feed.php';
-                    ?>
-                    </tbody>
-                </table>
+                <div class="tab-content">
+                    <div id="live" class="tab-pane fade in active">
+                        <table class="table table-hover">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+                            <?php include 'live_feed.php';
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="friends" class="tab-pane fade">
+                        <table class="table table-hover">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+                            <?php include 'live_feed.php';
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
             <div class="col-md-4 above">
 
@@ -301,13 +330,14 @@ if(isset($_POST['register'])) {
                 if(isset($_SESSION['session_id'])) {
                 ?>
                 <h3>How do you feel?</h3>
-                <table class="table">
-                    <thead>
-
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
+                    <hr>
+<!--                <table class="table">-->
+<!--                    <thead>-->
+<!---->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    <tr>-->
+<!--                        <td>-->
                             <div id="snippet-block" class="snippet">
                                 <p>
                                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
@@ -324,10 +354,10 @@ if(isset($_POST['register'])) {
                                     }
                                 </style>
                             </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    </tbody>-->
+<!--                </table>-->
                     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
                         <button type="submit" class="btn btn-default" name="logout">Logout</button>
                     </form>
