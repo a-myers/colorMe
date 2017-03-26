@@ -28,7 +28,7 @@ $statement->bindValue(':lname', $lname);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $hpassword);
     $statement->bindValue(':phone', $phone);
-    $statement->bindValue(':color', "#7aadff");
+    $statement->bindValue(':color', "7aadff");
 
 
     $statement->execute();

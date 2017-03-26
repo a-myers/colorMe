@@ -131,11 +131,5 @@ function submissionCheck(email,p1,p2,name,uname,phone)
 }
 function refreshFeed ()
 {
-        $.ajax({
-          url: "index.php",
-          cache: false,
-          success: function(data){
-             $("#auto_load_div").html(data);
-          } 
-        });
+location.reload();
 }
