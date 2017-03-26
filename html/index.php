@@ -234,7 +234,7 @@ if(isset($_POST['register'])) {
 
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input class="form-control" type="text" value='' name="phone" id="phone" onblur="checkPhone('phone')">
+                <input class="form-control bfh-phone" data-format="(ddd) ddd-dddd" type="text" value='' name="phone" id="phone" onblur="checkPhone('phone')">
             </div>
 
             <button type="button" class="btn btn-default" name="modal_register" onclick="submissionCheck('email','password','v_password','fname','lname','phone')">Register</button>
@@ -410,6 +410,8 @@ if(isset($_POST['register'])) {
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+<script src="js/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.min.js"></script>
 
 </body>
 
