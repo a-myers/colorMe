@@ -170,3 +170,17 @@ table.no-wrap td {
     font-size: 25px;
     text-align: center;
 }
+
+.form-nav {
+    position: relative;
+    float: right;
+    top: 15px;
+    color: transparent;
+    background-color: transparent;
+}
+
+.white {
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+}

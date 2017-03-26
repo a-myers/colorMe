@@ -265,7 +265,12 @@ if(isset($_POST['register'])) {
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #<?php echo $_SESSION['color']; ?>">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div style="display:flex;justify-content:center;align-items:center;"><h1 id="title">colorMe</h1></div>
+            <div style="display:flex;justify-content:center;align-items:center;">
+                <h1 id="title">colorMe</h1>
+                <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal form-nav" role="form">
+                    <button type="submit" class="white btn" name="logout">Logout</button>
+                </form>
+            </div>
 
         </div>
         <!-- /.container -->
@@ -354,9 +359,7 @@ if(isset($_POST['register'])) {
 <!--                    </tr>-->
 <!--                    </tbody>-->
 <!--                </table>-->
-                    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form">
-                        <button type="submit" class="btn btn-default" name="logout">Logout</button>
-                    </form>
+
                 <?php } else { ?>
 
 
