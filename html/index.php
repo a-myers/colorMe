@@ -282,7 +282,7 @@ if(isset($_POST['register'])) {
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#live">Live Feed</a></li>
                     <li><a data-toggle="tab" href="#friends">Friends</a></li>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" id="refresh" onclick="refresh();">
                         <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
                     </button>
                 </ul>
