@@ -198,3 +198,10 @@ table.no-wrap td {
 .circle-div {
     width: 38px;
 }
+
+.nav-img {
+    position: relative;
+    float: left;
+    height: 65px;
+    width: auto;
+}

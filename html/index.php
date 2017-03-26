@@ -35,6 +35,24 @@ if(isset($_SESSION['session_id'])) {
 
     <title>colorMe</title>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="css/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="css/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="css/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="css/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="css/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="css/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="css/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="css/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="css/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="css/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="css/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="css/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="css/fav/favicon-16x16.png">
+    <link rel="manifest" href="css/fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -266,6 +284,7 @@ if(isset($_POST['register'])) {
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div style="display:flex;justify-content:center;align-items:center;">
+                <img src="css/gay-happy-octopus.gif" class="nav-img">
                 <h1 id="title">colorMe</h1>
                 <?php if(isset($_SESSION['session_id'])) { ?>
                 <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal form-nav" role="form">
