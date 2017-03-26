@@ -205,3 +205,7 @@ table.no-wrap td {
     height: 65px;
     width: auto;
 }
+
+.higher_modal {
+    margin-top: -180px !important;
+}

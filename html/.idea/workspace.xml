@@ -17,18 +17,18 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="107">
-                  <caret line="314" column="58" lean-forward="false" selection-start-line="314" selection-start-column="58" selection-end-line="314" selection-end-column="58" />
+                <state relative-caret-position="397">
+                  <caret line="243" column="0" lean-forward="true" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
                   <folding>
                     <element signature="e#5186#5193#1#HTML" expanded="true" />
                     <element signature="e#7718#7725#1#HTML" expanded="true" />
-                    <element signature="e#8495#8502#1#HTML" expanded="true" />
+                    <element signature="e#8508#8515#1#HTML" expanded="true" />
                     <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <marker date="1490542604000" expanded="true" signature="265:319" ph="SELECT color... users" />
-                    <marker date="1490542604000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
-                    <marker date="1490542604000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
-                    <marker date="1490542604000" expanded="true" signature="14929:14962" ph="..." />
+                    <marker date="1490542805000" expanded="true" signature="265:319" ph="SELECT color... users" />
+                    <marker date="1490542805000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
+                    <marker date="1490542805000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
+                    <marker date="1490542805000" expanded="true" signature="14942:14975" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -125,11 +125,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="149" selection-end-column="3" />
+                <state relative-caret-position="545">
+                  <caret line="209" column="20" lean-forward="false" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -147,7 +147,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="get_user_info.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="get_user_info.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/get_user_info.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
@@ -226,12 +226,12 @@
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/live_feed.php" />
         <option value="$PROJECT_DIR$/friend_feed.php" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/f_add_friend_search.php" />
         <option value="$PROJECT_DIR$/register_method.php" />
         <option value="$PROJECT_DIR$/f_check_username.php" />
         <option value="$PROJECT_DIR$/f_check_user_emails.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -471,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39907000" />
+    <option name="totallyTimeSpent" value="40166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1280" height="735" extended-state="6" />
@@ -644,13 +644,13 @@
           <folding>
             <element signature="e#5186#5193#1#HTML" expanded="true" />
             <element signature="e#7718#7725#1#HTML" expanded="true" />
-            <element signature="e#8495#8502#1#HTML" expanded="true" />
+            <element signature="e#8508#8515#1#HTML" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490542604000" expanded="true" signature="265:319" ph="SELECT color... users" />
-            <marker date="1490542604000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="14929:14962" ph="..." />
+            <marker date="1490542805000" expanded="true" signature="265:319" ph="SELECT color... users" />
+            <marker date="1490542805000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="14942:14975" ph="..." />
           </folding>
         </state>
       </provider>
@@ -766,13 +766,13 @@
           <folding>
             <element signature="e#5186#5193#1#HTML" expanded="true" />
             <element signature="e#7718#7725#1#HTML" expanded="true" />
-            <element signature="e#8495#8502#1#HTML" expanded="true" />
+            <element signature="e#8508#8515#1#HTML" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490542604000" expanded="true" signature="265:319" ph="SELECT color... users" />
-            <marker date="1490542604000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="14929:14962" ph="..." />
+            <marker date="1490542805000" expanded="true" signature="265:319" ph="SELECT color... users" />
+            <marker date="1490542805000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="14942:14975" ph="..." />
           </folding>
         </state>
       </provider>
@@ -914,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="149" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/live_feed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -984,20 +976,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="209" column="20" lean-forward="false" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="314" column="58" lean-forward="false" selection-start-line="314" selection-start-column="58" selection-end-line="314" selection-end-column="58" />
+        <state relative-caret-position="397">
+          <caret line="243" column="0" lean-forward="true" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
             <element signature="e#5186#5193#1#HTML" expanded="true" />
             <element signature="e#7718#7725#1#HTML" expanded="true" />
-            <element signature="e#8495#8502#1#HTML" expanded="true" />
+            <element signature="e#8508#8515#1#HTML" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490542604000" expanded="true" signature="265:319" ph="SELECT color... users" />
-            <marker date="1490542604000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
-            <marker date="1490542604000" expanded="true" signature="14929:14962" ph="..." />
+            <marker date="1490542805000" expanded="true" signature="265:319" ph="SELECT color... users" />
+            <marker date="1490542805000" expanded="true" signature="3667:3762" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="4526:4596" ph="UPDATE users... " />
+            <marker date="1490542805000" expanded="true" signature="14942:14975" ph="..." />
           </folding>
         </state>
       </provider>

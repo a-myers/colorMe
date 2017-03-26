@@ -228,7 +228,7 @@ if(isset($_POST['register'])) {
 <div id="invite_modal" class="modal">
 
     <!-- Modal content -->
-    <div class="modal-content">
+    <div class="modal-content higher_modal">
         <span class="close">&times;</span>
         <h4>Complete Registration</h4>
         <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" role="form" id="main_form">
